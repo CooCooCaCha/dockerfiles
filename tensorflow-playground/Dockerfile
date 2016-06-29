@@ -10,5 +10,8 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade $TF_BINARY_URL
 RUN pip install keras scipy numpy matplotlib pillow pandas retrying scikit-learn h5py notebook flask
 
+RUN mkdir /app
+WORKDIR /app
+
 EXPOSE 8888
 CMD jupyter notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks
