@@ -27,7 +27,10 @@ RUN rm -rf OpenBLAS && \
 
 RUN pip install --upgrade $TF_BINARY_URL
 RUN pip install keras scipy matplotlib pillow pandas retrying scikit-learn h5py notebook gensim spacy
-#RUN pip install https://github.com/ipython-contrib/IPython-notebook-extensions/tarball/master
+RUN pip install flask grpcio
+
+RUN mkdir /app
+WORKDIR /app
 
 EXPOSE 8888
 CMD jupyter notebook --no-browser --ip=0.0.0.0 --notebook-dir=/app/notebooks
