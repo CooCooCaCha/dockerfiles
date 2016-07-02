@@ -27,7 +27,7 @@ RUN rm -rf OpenBLAS && \
 
 RUN pip install --upgrade $TF_BINARY_URL
 RUN pip install keras scipy matplotlib pillow pandas retrying scikit-learn h5py notebook gensim spacy
-RUN pip install flask grpcio
+RUN pip install flask
 
 RUN mkdir /app
 WORKDIR /app
