@@ -10,6 +10,8 @@ RUN pip install --upgrade pip Cython
 RUN pip install --upgrade $TF_BINARY_URL
 RUN pip install --upgrade numpy keras scipy matplotlib pillow pandas retrying scikit-learn h5py notebook gensim spacy flask
 
+RUN python3 -m spacy.en.download
+
 RUN mkdir -p /app/notebooks
 WORKDIR /app
 
