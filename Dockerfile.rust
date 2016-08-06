@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-SHELL ["/bin/bash", "-c"]
 
 COPY src/install_rust.sh /
-RUN source /install_rust.sh
+RUN /bin/bash -c "source /install_rust.sh"
